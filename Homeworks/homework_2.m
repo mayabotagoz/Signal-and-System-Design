@@ -1,0 +1,21 @@
+t = linspace(-5, 1, 1000);
+ramp1 = t.*(t>=0);
+ramp2 = 2*t.*(t>=0);
+ramp3 = 3*t.*(t>=0);
+figure;
+plot(t, ramp1, 'LineWidth', 2);
+hold on;
+plot(t, ramp2, 'LineWidth', 2);
+plot(t, ramp3, 'LineWidth', 2);
+xlabel('Time');
+ylabel('Amplitude');
+title('Ramp Functions');
+legend('Slope = 1', 'Slope = 2', 'Slope = 3');
+step = ones(1, length(t));
+ramp_concat = [ramp1; ramp2; ramp3; step];
+figure;
+plot(t, ramp_concat, 'LineWidth', 2);
+xlabel('Time');
+ylabel('Amplitude');
+title('Concatenated Signal');
+
