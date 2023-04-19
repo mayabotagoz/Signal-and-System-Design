@@ -1,0 +1,18 @@
+x1 = 0:.2:4;
+x2 = -2:.5:0;
+x3 = -4:-2;
+y1 = (2*(sin((pi/4)*x1)));
+y2 = -x2;
+y3 =[2 2 2];
+figurew (1); subplot(2,2,1);
+plot(x1, y1, x2, y2, x3, y3, 'LineWidth', 3);
+xlabel('time');
+ylabel('f(t)');
+title('Original continuous-time signal');
+grid on;
+hold on;
+axis1 = [0 0 ];
+axis2 = [-1 2 5];
+axis3 = [-5 5];
+axis4 = [0 0];
+plot(axis1, axis2, axsi3, axis4, 'LineWidth', 1);
